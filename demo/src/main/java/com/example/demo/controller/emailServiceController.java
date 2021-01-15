@@ -12,7 +12,7 @@ public class emailServiceController {
     
     // emailService emailservice = new emailServiceImp();
 
-    @Autowired
+    // @Autowired
     emailService emailservice;
     @RequestMapping("/sendEmail")
     public String email() {
@@ -25,10 +25,21 @@ public class emailServiceController {
         return emailservice;
     }
 
-    @Autowired
-    public void setEmailservice(emailService emailservice) {
-        this.emailservice = emailservice;
-    }
+    // @Autowired
+    // public void setEmailservice(emailService emailServiceImp) {
+    //     this.emailservice = emailservice;
+    // }
+
+    // Autowired using contructor
+    // @Autowired
+    // public void emailServiceController(emailService abc) {
+    //         this.emailservice = abc;
+    //     }
+
+        @Autowired
+        public emailServiceController(emailService dummyBean) {
+            this.emailservice = dummyBean;
+        }
 
   
 }

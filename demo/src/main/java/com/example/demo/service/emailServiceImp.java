@@ -2,9 +2,12 @@ package com.example.demo.service;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+// the class which we want to instantiate at run time can be define with annotation @component
+@Component("dummyBean")
+@Primary
 public class emailServiceImp implements emailService{
 
 

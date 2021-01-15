@@ -4,7 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Component;
 
-// @Component
+// @Component("smtp")
 public class smptEmailSender implements emailService {
 
     private static Log log = LogFactory.getLog(emailServiceImp.class);
