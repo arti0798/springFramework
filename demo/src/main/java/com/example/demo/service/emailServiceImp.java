@@ -2,7 +2,9 @@ package com.example.demo.service;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Component;
 
+@Component
 public class emailServiceImp implements emailService{
 
 
