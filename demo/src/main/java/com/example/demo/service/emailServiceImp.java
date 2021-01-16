@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 // the class which we want to instantiate at run time can be define with annotation @component
-@Component("dummyBean")
-@Primary
+// @Component("dummyBean")
+// @Primary
 public class emailServiceImp implements emailService{
 
 

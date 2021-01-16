@@ -4,6 +4,7 @@ import com.example.demo.service.emailService;
 import com.example.demo.service.emailServiceImp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,9 +37,9 @@ public class emailServiceController {
     //         this.emailservice = abc;
     //     }
 
-        @Autowired
-        public emailServiceController(emailService dummyBean) {
-            this.emailservice = dummyBean;
+        @Autowired  //The @Autowired annotation is a great way of making the need to inject a dependency in Spring explicit. 
+        public emailServiceController(emailService abc) {
+            this.emailservice = abc;
         }
 
   
