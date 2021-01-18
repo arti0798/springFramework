@@ -1,0 +1,14 @@
+{% comment %} other way for jar {% endcomment %}
+
+Manifest-Version: 1.0
+Class-Path: .
+Main-Class: src.main.java.com.example.demo.DemoApplication
+{% comment %} Main-Class: org.springframework.boot.SpringApplication
+Main-Class: org.springframework.boot.autoconfigure.SpringBootApplication {% endcomment %}
+
+
+{% comment %} on CML {% endcomment %}
+
+javac -cp src/ src/person/*.java -d bin
+jar -cvfm person.jar manifest.txt -C bin/ . src/
+java -jar person.jar     
