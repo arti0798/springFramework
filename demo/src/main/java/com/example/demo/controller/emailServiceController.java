@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import javax.mail.MessagingException;
+
 import com.example.demo.service.emailService;
 import com.example.demo.service.emailServiceImp;
 
@@ -16,7 +18,7 @@ public class emailServiceController {
     // @Autowired
     emailService emailservice;
     @RequestMapping("/sendEmail")
-    public String email() {
+    public String email() throws MessagingException {
 
         emailservice.sendEmail("arti999@gmail.com", "testing", "I m sending email");
         return "Email sent!!!";
